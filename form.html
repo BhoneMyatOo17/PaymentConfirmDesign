@@ -176,22 +176,10 @@
   </div>
 
   <script>
-    // Form submission handler
+    // Form submission handler - just redirect to confirmation page
     document.getElementById('registration-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      // Get form data
-      const formData = {
-        name: document.getElementById('name').value,
-        attendees: document.getElementById('attendees').value,
-        room: document.getElementById('room').value
-      };
-      
-      // Store in sessionStorage for the success page
-      sessionStorage.setItem('registrationData', JSON.stringify(formData));
-      
-      // Redirect to success page
-      window.location.href = 'songkran-success.html';
+      window.location.href = 'confirmed.html';
     });
 
     // Dark mode detection
